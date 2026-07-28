@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gazeta Grudziądzka — prototyp</title>
+<meta name="description" content="Gazeta Grudziądzka — projekt koncepcyjny wznowienia pisma założonego w 1894 r. przez Wiktora Kulerskiego. Jedno wydanie na dobę.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Gazeta Grudziądzka — prototyp">
+<meta property="og:description" content="Gazeta Grudziądzka — projekt koncepcyjny wznowienia pisma założonego w 1894 r. przez Wiktora Kulerskiego. Jedno wydanie na dobę.">
+<meta name="theme-color" content="#38322c">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: oklch(0.93 0.014 85); color: oklch(0.24 0.012 60); font-family: "Source Serif 4", Georgia, serif; text-wrap: pretty; }
+  a { color: oklch(0.24 0.012 60); text-decoration: none; }
+  a:hover { color: oklch(0.48 0.15 32); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  p { margin: 0 0 0.72em; }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; }
+</style>
+<style>
+  /* hover states lifted out of the prototype's style-hover attributes */
+  .hv1:hover { background:oklch(0.24 0.012 60) !important; color:oklch(0.96 0.01 85) !important; }
+  .hv2:hover { border-color:oklch(0.24 0.012 60) !important; color:oklch(0.24 0.012 60) !important; }
+  .hv3:hover { border-color:oklch(0.72 0.06 40) !important; }
+  .hv4:hover { border-color:oklch(0.72 0.06 40) !important; }
+  .hv5:hover { border-color:oklch(0.72 0.06 40) !important; }
+  .hv6:hover { border-color:oklch(0.72 0.06 40) !important; }
+  .hv7:hover { background:oklch(0.94 0.012 85) !important; color:oklch(0.24 0.012 60) !important; }
+</style>
+</head>
+<body>
+<div style="background:oklch(0.24 0.012 60);">
+    <div style="max-width:1360px; margin:0 auto; padding:9px clamp(14px,3vw,40px); display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline; font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.6; letter-spacing:0.08em; color:oklch(0.94 0.012 85);">
+      <span style="text-transform:uppercase; letter-spacing:0.16em; border:1px solid oklch(0.72 0.06 40); color:oklch(0.80 0.06 40); padding:2px 7px;">Prototyp</span>
+      <span style="text-transform:uppercase;">Makieta projektowa · pismo jeszcze nie istnieje · wszystkie teksty, nazwiska i liczby w wydaniu są przykładowe</span>
+    </div>
+</div>
+<div style="min-height:100vh; background:oklch(0.955 0.012 85); background-image:radial-gradient(oklch(0.87 0.02 80 / 0.35) 0.5px, transparent 0.5px); background-size:4px 4px;">
+
+  <div style="max-width:1360px; margin:0 auto; padding:0 clamp(14px,3vw,40px);">
+
+    <!-- pasek wydania -->
+    <div style="display:flex; flex-wrap:wrap; gap:8px 22px; align-items:baseline; justify-content:space-between; padding:10px 0 8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.01 60);">
+      <span>Wydanie z wtorku 28 lipca 2026 &nbsp;·&nbsp; opisujemy poniedziałek 27 lipca &nbsp;·&nbsp; Rok 132 &nbsp;·&nbsp; Nr 4213</span>
+      <div style="display:flex; flex-wrap:wrap; gap:6px 18px;">
+        <a href="#zasady">Nasze zasady</a>
+        <a href="#warsztat">Jak powstaje wydanie</a>
+        <a href="#archiwum">Archiwum 1894–1939</a>
+        <span>Faza MVP · dostęp bezpłatny</span>
+      </div>
+    </div>
+
+    <!-- winieta -->
+    <header style="border-top:3px solid oklch(0.24 0.012 60); border-bottom:1px solid oklch(0.24 0.012 60); padding:18px 0 14px;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:clamp(10px,3vw,34px);">
+        <div style="flex:1 1 165px; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.7; letter-spacing:0.04em; color:oklch(0.45 0.01 60); text-transform:uppercase;">
+          Jedno wydanie<br />na dobę<br />od 1 października 1894
+        </div>
+        <h1 style="flex:2 1 min(100%,440px); min-width:0; text-align:center; font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(38px,8.6vw,104px); line-height:0.92; letter-spacing:-0.02em;">Gazeta Grudziądzka</h1>
+        <div style="flex:1 1 165px; min-width:0; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.7; letter-spacing:0.04em; color:oklch(0.45 0.01 60); text-transform:uppercase;">
+          Pismo ogólnopolskie<br />bez redakcji i siedziby<br />składane przez AI
+        </div>
+      </div>
+      <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; justify-content:center; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(13px,1.6vw,17px); color:oklch(0.38 0.012 60);">
+        <span>„Uczmy dzieci czytać po polsku” — i czytajmy sami, uważnie</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-style:normal; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32);">Wydanie dzienne · bez aktualizacji</span>
+      </div>
+    </header>
+
+    <!-- nawigacja -->
+    <nav style="display:flex; flex-wrap:wrap; gap:2px 0; align-items:stretch; justify-content:space-between; border-bottom:3px double oklch(0.24 0.012 60); padding:9px 0 10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;">
+      <div style="display:flex; flex-wrap:wrap; gap:6px 20px;">
+        <a href="#" style="border-bottom:2px solid oklch(0.48 0.15 32); padding-bottom:2px;">Polska</a>
+        <a href="#">Sejm i rząd</a>
+        <a href="#">Gospodarka</a>
+        <a href="#">Samorządy</a>
+        <a href="#">Wieś</a>
+        <a href="#">Świat</a>
+        <a href="#">Język i pamięć</a>
+        <a href="#">Kultura</a>
+        <a href="#">Listy</a>
+      </div>
+      <div style="display:flex; gap:16px; color:oklch(0.45 0.01 60);">
+        <a href="#">Szukaj</a>
+        <a href="#archiwum">Archiwum</a>
+      </div>
+    </nav>
+
+    <!-- nota wydawnicza zamiast paska newsów -->
+    <div style="display:flex; flex-wrap:wrap; gap:8px 22px; align-items:baseline; border-bottom:1px solid oklch(0.78 0.012 70); padding:10px 0; font-size:14.5px;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; background:oklch(0.24 0.012 60); color:oklch(0.97 0.01 85); padding:3px 7px;">Wydanie zamknięte</span>
+      <span style="color:oklch(0.36 0.012 60);">Wczoraj o 23.00. Do jutra rana nic tu nie drgnie — nie dopisujemy i nie poprawiamy nagłówków. Wydanie składa system AI na podstawie źródeł wskazanych pod każdym tekstem; sprostowania publikujemy osobno, z datą.</span>
+    </div>
+
+    <!-- czoło wydania -->
+    <main style="display:flex; flex-wrap:wrap; align-items:stretch; gap:0; border-bottom:3px double oklch(0.24 0.012 60);">
+
+      <aside style="flex:1 1 260px; min-width:0; padding:20px clamp(14px,2vw,24px) 24px 0; border-right:1px solid oklch(0.78 0.012 70);">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; padding-bottom:8px; border-bottom:2px solid oklch(0.24 0.012 60);">Wczoraj w kraju</h3>
+        <div style="display:flex; flex-direction:column;">
+          
+            <a href="#" style="display:block; padding:11px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:4px;">Sejm</span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:17px; line-height:1.22;">Trzecie czytanie ustawy o dochodach samorządów. Głosowanie w środę</span>
+            </a>
+          
+            <a href="#" style="display:block; padding:11px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:4px;">Gospodarka</span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:17px; line-height:1.22;">Inflacja 3,1 proc. Żywność drożeje najszybciej od dziewięciu miesięcy</span>
+            </a>
+          
+            <a href="#" style="display:block; padding:11px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:4px;">Energia</span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:17px; line-height:1.22;">Rekord produkcji z fotowoltaiki, dwie elektrownie węglowe zatrzymane</span>
+            </a>
+          
+            <a href="#" style="display:block; padding:11px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:4px;">Sądy</span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:17px; line-height:1.22;">Trybunał w Strasburgu: skarga 400 sędziów przyjęta do rozpoznania</span>
+            </a>
+          
+            <a href="#" style="display:block; padding:11px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:4px;">Oświata</span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:17px; line-height:1.22;">Podwójny rocznik w liceach. Gdzie zabrakło miejsc — dane z 16 kuratoriów</span>
+            </a>
+          
+        </div>
+        <div style="margin-top:18px; padding:14px; background:oklch(0.91 0.016 85); border:1px solid oklch(0.78 0.012 70);">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:8px;">Liczba dnia</span>
+          <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:44px; line-height:1;">128 500</span>
+          <p style="margin:6px 0 0; font-size:13px; line-height:1.5; color:oklch(0.38 0.012 60);">egzemplarzy w 1914 roku — największe polskie pismo na świecie, robione na prowincji małymi środkami. Ta gazeta zaczyna od jednej osoby i jednego modelu.</p>
+        </div>
+      </aside>
+
+      <article style="flex:3 1 min(100%,430px); min-width:0; padding:20px clamp(14px,2vw,24px) 26px; border-right:1px solid oklch(0.78 0.012 70);">
+        <span style="display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:10px;">Ustawa o dochodach samorządów · analiza</span>
+        <h2 style="font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(30px,4.6vw,58px); line-height:1.02; letter-spacing:-0.015em;">Rząd mówi o 9 miliardach więcej, opozycja o 4 miliardach mniej. Policzyliśmy to trzeci raz</h2>
+        <p style="margin:14px 0 16px; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(16px,1.9vw,21px); line-height:1.42; color:oklch(0.36 0.012 60);">Obie liczby są prawdziwe i obie są niepełne. Różnica bierze się z roku bazowego i z tego, czy wliczyć subwencję oświatową. Pokazujemy arkusz, żeby każdy mógł sprawdzić rachunek.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px 16px; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.01 60); padding-bottom:14px; border-bottom:1px solid oklch(0.78 0.012 70);">
+          <span>Zestawienie: system AI</span><span>·</span><span>weryfikacja: redaktor prowadzący</span><span>·</span><span>czas czytania 11 min</span>
+        </div>
+        <div style="margin:16px 0 8px; height:clamp(190px,26vw,420px); background:repeating-linear-gradient(135deg, oklch(0.86 0.018 82) 0 6px, oklch(0.91 0.014 85) 6px 12px); border:1px solid oklch(0.72 0.012 70); display:flex; align-items:flex-end; padding:12px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.42 0.012 60); background:oklch(0.955 0.012 85); padding:5px 8px;">wykres: dochody gmin 2019–2027</span>
+        </div>
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:oklch(0.48 0.012 60); margin-bottom:18px;">Dochody własne gmin w cenach stałych z 2019 r. Źródło: Ministerstwo Finansów, sprawozdania Rb-27S.</p>
+        <div style="columns:2; column-width:260px; column-gap:clamp(18px,2.4vw,34px); column-rule:1px solid oklch(0.82 0.012 70); font-size:16.5px; line-height:1.62;">
+          <p><span style="float:left; font-family:'Playfair Display',serif; font-weight:900; font-size:62px; line-height:0.78; padding:5px 8px 0 0;">S</span>pór o pieniądze gmin toczy się od trzech lat i za każdym razem wygląda tak samo: dwie konferencje prasowe, dwie liczby, zero wspólnej podstawy. Wzięliśmy więc sprawozdania budżetowe wszystkich 2 477 gmin i policzyliśmy od zera.</p>
+          <p>Wynik: dochody własne rosną nominalnie o 7,8 proc., ale po odjęciu inflacji i nowych zadań realnie o 1,1 proc. Gminy wiejskie zyskują najmniej, miasta na prawach powiatu najwięcej.</p>
+          <p>Nie twierdzimy, że któraś ze stron kłamie. Twierdzimy, że obie wybrały korzystny rok bazowy — i że wyborca nie ma obowiązku zgadywać, który z nich.</p>
+          <p>Arkusz z formułami jest otwarty. Jeśli znajdziecie błąd, poprawimy go w następnym wydaniu i napiszemy, kto go znalazł.</p>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;">
+          <a href="#" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid oklch(0.24 0.012 60); padding:9px 14px;" class="hv1">Otwórz arkusz (XLSX)</a>
+          <a href="#warsztat" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid oklch(0.78 0.012 70); padding:9px 14px; color:oklch(0.45 0.01 60);" class="hv2">Jak liczyliśmy — metoda</a>
+        </div>
+      </article>
+
+      <aside style="flex:1 1 260px; min-width:0; padding:20px 0 24px clamp(14px,2vw,24px);">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; padding-bottom:8px; border-bottom:2px solid oklch(0.24 0.012 60);">Polityka bez kibicowania</h3>
+        <p style="margin:12px 0 4px; font-size:14px; line-height:1.55; color:oklch(0.42 0.012 60);">Jedna sprawa, stanowiska po kolei, bez przymiotników. Kolejność losowa i zmienia się codziennie.</p>
+        <div style="display:flex; flex-direction:column;">
+          
+            <div style="padding:12px 0; border-top:1px solid oklch(0.78 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:5px;">Koalicja rządząca</span>
+              <span style="display:block; font-size:15px; line-height:1.55;">Samorządy dostaną w 2027 r. o 9,1 mld zł więcej niż dziś.</span>
+              <span style="display:block; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.5; color:oklch(0.48 0.15 32);">Weryfikacja: prawdziwe dla dochodów nominalnych, bez korekty o inflację.</span>
+            </div>
+          
+            <div style="padding:12px 0; border-top:1px solid oklch(0.78 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:5px;">Opozycja parlamentarna</span>
+              <span style="display:block; font-size:15px; line-height:1.55;">Gminy stracą realnie 4,2 mld zł na skutek nowych zadań.</span>
+              <span style="display:block; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.5; color:oklch(0.48 0.15 32);">Weryfikacja: prawdziwe przy wliczeniu subwencji oświatowej i roku bazowym 2024.</span>
+            </div>
+          
+            <div style="padding:12px 0; border-top:1px solid oklch(0.78 0.012 70);">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:5px;">Strona samorządowa</span>
+              <span style="display:block; font-size:15px; line-height:1.55;">Bez zmiany algorytmu 700 gmin nie domknie budżetu.</span>
+              <span style="display:block; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.5; color:oklch(0.48 0.15 32);">Weryfikacja: z naszych obliczeń wynika 612 gmin; związek podał szacunek marcowy.</span>
+            </div>
+          
+        </div>
+        <div style="margin-top:16px; padding:16px; border:3px double oklch(0.24 0.012 60);">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:8px;">Zgłoś sprawę lub błąd</span>
+          <p style="font-size:14.5px; line-height:1.55; margin-bottom:12px;">Nie mamy sekretariatu ani portierni. Mamy skrzynkę, którą czyta człowiek, i szyfrowany kanał dla dokumentów.</p>
+          <div style="display:flex; gap:0; border:1px solid oklch(0.24 0.012 60);">
+            <input type="text" placeholder="twój@email.pl" style="flex:1 1 auto; min-width:0; border:0; background:oklch(0.97 0.01 85); padding:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.24 0.012 60);" />
+            <button type="button" style="border:0; border-left:1px solid oklch(0.24 0.012 60); background:oklch(0.24 0.012 60); color:oklch(0.96 0.01 85); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; padding:10px 12px; cursor:pointer;">Wyślij</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- druga płachta -->
+    <section style="display:flex; flex-wrap:wrap; gap:0; border-bottom:3px double oklch(0.24 0.012 60);">
+      
+        <article style="flex:1 1 240px; min-width:0; padding:20px clamp(14px,1.8vw,22px); border-right:1px solid oklch(0.78 0.012 70);">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:9px;">Wieś</span>
+          <div style="height:clamp(150px,17vw,215px); background:repeating-linear-gradient(135deg, oklch(0.86 0.018 82) 0 6px, oklch(0.91 0.014 85) 6px 12px); border:1px solid oklch(0.75 0.012 70); display:flex; align-items:flex-end; padding:9px; margin-bottom:11px;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.42 0.012 60); background:oklch(0.955 0.012 85); padding:4px 6px;">kombajn, żniwa 2026</span>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(19px,2.1vw,24px); line-height:1.16;">Żniwa dwa tygodnie przed czasem. Skup płaci mniej niż rok temu</h3>
+          <p style="margin-top:9px; font-size:15.5px; line-height:1.56; color:oklch(0.36 0.012 60);">Pszenica 890 zł za tonę, rzepak 1 780 zł. Rolnicy wstrzymują sprzedaż i liczą koszty suszenia.</p>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.48 0.012 60);">Źródła: GUS, e-WGT · sprawdzone</span>
+        </article>
+      
+        <article style="flex:1 1 240px; min-width:0; padding:20px clamp(14px,1.8vw,22px); border-right:1px solid oklch(0.78 0.012 70);">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:9px;">Świat</span>
+          <div style="height:clamp(150px,17vw,215px); background:repeating-linear-gradient(135deg, oklch(0.86 0.018 82) 0 6px, oklch(0.91 0.014 85) 6px 12px); border:1px solid oklch(0.75 0.012 70); display:flex; align-items:flex-end; padding:9px; margin-bottom:11px;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.42 0.012 60); background:oklch(0.955 0.012 85); padding:4px 6px;">sala obrad w Brukseli</span>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(19px,2.1vw,24px); line-height:1.16;">Unijny mechanizm graniczny CO2 wchodzi w pełni. Kto zapłaci w Polsce</h3>
+          <p style="margin-top:9px; font-size:15.5px; line-height:1.56; color:oklch(0.36 0.012 60);">Cementownie i huty mówią o 4 mld zł rocznie. Sprawdzamy, ile z tego trafi w ceny sklepowe.</p>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.48 0.012 60);">Źródła: KE, PSPC · sprawdzone</span>
+        </article>
+      
+        <article style="flex:1 1 240px; min-width:0; padding:20px clamp(14px,1.8vw,22px); border-right:1px solid oklch(0.78 0.012 70);">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:9px;">Polacy za granicą</span>
+          <div style="height:clamp(150px,17vw,215px); background:repeating-linear-gradient(135deg, oklch(0.86 0.018 82) 0 6px, oklch(0.91 0.014 85) 6px 12px); border:1px solid oklch(0.75 0.012 70); display:flex; align-items:flex-end; padding:9px; margin-bottom:11px;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.42 0.012 60); background:oklch(0.955 0.012 85); padding:4px 6px;">szkoła sobotnia, klasa</span>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(19px,2.1vw,24px); line-height:1.16;">W szkołach sobotnich uczy się 92 tys. dzieci. Brakuje 1 300 nauczycieli</h3>
+          <p style="margin-top:9px; font-size:15.5px; line-height:1.56; color:oklch(0.36 0.012 60);">Największe braki w Niemczech, Irlandii i Norwegii. Ministerstwo obiecuje podręczniki, nie pensje.</p>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.48 0.012 60);">Źródła: ORPEG, MEN · sprawdzone</span>
+        </article>
+      
+        <article style="flex:1 1 240px; min-width:0; padding:20px clamp(14px,1.8vw,22px); border-right:1px solid oklch(0.78 0.012 70);">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:9px;">Migracja</span>
+          <div style="height:clamp(150px,17vw,215px); background:repeating-linear-gradient(135deg, oklch(0.86 0.018 82) 0 6px, oklch(0.91 0.014 85) 6px 12px); border:1px solid oklch(0.75 0.012 70); display:flex; align-items:flex-end; padding:9px; margin-bottom:11px;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.42 0.012 60); background:oklch(0.955 0.012 85); padding:4px 6px;">kurs polskiego dla dorosłych</span>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(19px,2.1vw,24px); line-height:1.16;">Milion cudzoziemców płaci u nas składki. 40 tys. czeka na kurs polskiego</h3>
+          <p style="margin-top:9px; font-size:15.5px; line-height:1.56; color:oklch(0.36 0.012 60);">Kolejki do bezpłatnych kursów sięgają 14 miesięcy. Bez języka nie ma awansu ani obywatelstwa.</p>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.48 0.012 60);">Źródła: ZUS, UdSC · sprawdzone</span>
+        </article>
+      
+    </section>
+
+    <!-- kraj poza stolicą + język i pamięć -->
+    <section style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:0 clamp(18px,3vw,40px); padding:22px 0 26px; border-bottom:3px double oklch(0.24 0.012 60);">
+      <div style="min-width:0;">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; padding-bottom:8px; border-bottom:2px solid oklch(0.24 0.012 60); margin-bottom:4px;">Kraj poza stolicą</h3>
+        
+          <a href="#" style="display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:baseline; padding:13px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+            <span style="font-family:'Playfair Display',serif; font-weight:900; font-size:26px; color:oklch(0.75 0.012 70);">01</span>
+            <span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:19px; line-height:1.2;">Powiat sępoleński bez ginekologa. Najbliższy oddział 60 km dalej</span>
+              <span style="display:block; margin-top:5px; font-size:14.5px; line-height:1.5; color:oklch(0.42 0.012 60);">NFZ ogłosił trzeci konkurs bez rozstrzygnięcia.</span>
+            </span>
+          </a>
+        
+          <a href="#" style="display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:baseline; padding:13px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+            <span style="font-family:'Playfair Display',serif; font-weight:900; font-size:26px; color:oklch(0.75 0.012 70);">02</span>
+            <span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:19px; line-height:1.2;">Zamiast PKS-u autobus na wezwanie. Trzy gminy podliczyły rok</span>
+              <span style="display:block; margin-top:5px; font-size:14.5px; line-height:1.5; color:oklch(0.42 0.012 60);">Koszt na pasażera spadł o 22 proc., liczba kursów wzrosła dwukrotnie.</span>
+            </span>
+          </a>
+        
+          <a href="#" style="display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:baseline; padding:13px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+            <span style="font-family:'Playfair Display',serif; font-weight:900; font-size:26px; color:oklch(0.75 0.012 70);">03</span>
+            <span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:19px; line-height:1.2;">Wisła najniżej od 2015 roku. Ujęcia wody pod obserwacją</span>
+              <span style="display:block; margin-top:5px; font-size:14.5px; line-height:1.5; color:oklch(0.42 0.012 60);">Hydrolodzy: sierpień zdecyduje o ograniczeniach w sześciu województwach.</span>
+            </span>
+          </a>
+        
+          <a href="#" style="display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:baseline; padding:13px 0; border-bottom:1px dotted oklch(0.72 0.012 70);">
+            <span style="font-family:'Playfair Display',serif; font-weight:900; font-size:26px; color:oklch(0.75 0.012 70);">04</span>
+            <span>
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:19px; line-height:1.2;">Biogazownia bez pozwolenia. Wojewoda uchylił decyzję po skargach</span>
+              <span style="display:block; margin-top:5px; font-size:14.5px; line-height:1.5; color:oklch(0.42 0.012 60);">Sześćdziesiąt podpisów wystarczyło, żeby wstrzymać budowę na rok.</span>
+            </span>
+          </a>
+        
+      </div>
+      <div style="min-width:0;">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; padding-bottom:8px; border-bottom:2px solid oklch(0.24 0.012 60); margin-bottom:16px;">Język i pamięć</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+          
+            <article style="flex:1 1 200px; min-width:0; border-top:1px solid oklch(0.78 0.012 70); padding-top:10px;">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:6px;">Język</span>
+              <h4 style="font-family:'Playfair Display',serif; font-size:18px; line-height:1.2;">Rada Języka o zapożyczeniach: „nie zakaz, lecz dobre polskie odpowiedniki”</h4>
+              <p style="margin-top:6px; font-size:14px; line-height:1.5; color:oklch(0.42 0.012 60);">Lista 40 propozycji, w tym pięć, które już weszły do użytku.</p>
+            </article>
+          
+            <article style="flex:1 1 200px; min-width:0; border-top:1px solid oklch(0.78 0.012 70); padding-top:10px;">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:6px;">Archiwa</span>
+              <h4 style="font-family:'Playfair Display',serif; font-size:18px; line-height:1.2;">Milion stron prasy z zaboru pruskiego trafi do sieci do 2028 r.</h4>
+              <p style="margin-top:6px; font-size:14px; line-height:1.5; color:oklch(0.42 0.012 60);">Projekt bibliotek Pomorza i Wielkopolski, dostęp bez opłat.</p>
+            </article>
+          
+            <article style="flex:1 1 200px; min-width:0; border-top:1px solid oklch(0.78 0.012 70); padding-top:10px;">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:6px;">Książka</span>
+              <h4 style="font-family:'Playfair Display',serif; font-size:18px; line-height:1.2;">Reprint „Dziesięciu przykazań obywatelskich” z 1894 roku</h4>
+              <p style="margin-top:6px; font-size:14px; line-height:1.5; color:oklch(0.42 0.012 60);">Nakład 1 894 egzemplarze, skan dostępny w naszym archiwum.</p>
+            </article>
+          
+            <article style="flex:1 1 200px; min-width:0; border-top:1px solid oklch(0.78 0.012 70); padding-top:10px;">
+              <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:6px;">Pamięć</span>
+              <h4 style="font-family:'Playfair Display',serif; font-size:18px; line-height:1.2;">Zaginione pomorskie kroniki szkolne. Czytelnicy odnaleźli już 38</h4>
+              <p style="margin-top:6px; font-size:14px; line-height:1.5; color:oklch(0.42 0.012 60);">Akcja trwa od kwietnia; skany oddajemy do archiwów państwowych.</p>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- zasady -->
+    
+      <section id="zasady" style="padding:26px 0 30px; border-bottom:3px double oklch(0.24 0.012 60);">
+        <div style="display:flex; flex-wrap:wrap; gap:12px 30px; align-items:flex-end; justify-content:space-between; margin-bottom:18px;">
+          <h2 style="font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(24px,3.4vw,40px); line-height:1.06;">Zasady, na których stoi to pismo</h2>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.45 0.01 60);">Wzór: „Dziesięć przykazań obywatelskich”, 5 X 1894</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(16px,2.4vw,28px);">
+          
+            <div style="flex:1 1 230px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:34px; line-height:1; color:oklch(0.48 0.15 32); margin-bottom:8px;">I</span>
+              <h3 style="font-family:'Playfair Display',serif; font-size:21px; line-height:1.18; margin-bottom:8px;">Jedno wydanie na dobę</h3>
+              <p style="font-size:15px; line-height:1.58; color:oklch(0.36 0.012 60);">Zamykamy o 23.00 i do rana nie zmieniamy ani słowa. Nie ma powiadomień, pasków „ostatnia godzina” ani wyścigu o pierwszeństwo.</p>
+            </div>
+          
+            <div style="flex:1 1 230px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:34px; line-height:1; color:oklch(0.48 0.15 32); margin-bottom:8px;">II</span>
+              <h3 style="font-family:'Playfair Display',serif; font-size:21px; line-height:1.18; margin-bottom:8px;">Polityka opisana, nie kibicowana</h3>
+              <p style="font-size:15px; line-height:1.58; color:oklch(0.36 0.012 60);">Stanowiska wszystkich stron w losowej kolejności, liczby każdej z nich sprawdzone. Nie mamy komentatorów dyżurnych i nie piszemy, na kogo głosować.</p>
+            </div>
+          
+            <div style="flex:1 1 230px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:34px; line-height:1; color:oklch(0.48 0.15 32); margin-bottom:8px;">III</span>
+              <h3 style="font-family:'Playfair Display',serif; font-size:21px; line-height:1.18; margin-bottom:8px;">Polskość bez pogardy</h3>
+              <p style="font-size:15px; line-height:1.58; color:oklch(0.36 0.012 60);">Krzewimy język, historię i lokalną pamięć — jak w 1894 r., gdy chodziło o to, by chłop umiał czytać po polsku. Nigdy przeciwko komukolwiek, kto tu mieszka i pracuje.</p>
+            </div>
+          
+            <div style="flex:1 1 230px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:34px; line-height:1; color:oklch(0.48 0.15 32); margin-bottom:8px;">IV</span>
+              <h3 style="font-family:'Playfair Display',serif; font-size:21px; line-height:1.18; margin-bottom:8px;">Maszyna składa, człowiek firmuje</h3>
+              <p style="font-size:15px; line-height:1.58; color:oklch(0.36 0.012 60);">AI zbiera i porządkuje; publikuje dopiero to, co przeszło ludzką kontrolę. Pod każdym tekstem źródła i nazwisko osoby odpowiedzialnej.</p>
+            </div>
+          
+            <div style="flex:1 1 230px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+              <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:34px; line-height:1; color:oklch(0.48 0.15 32); margin-bottom:8px;">V</span>
+              <h3 style="font-family:'Playfair Display',serif; font-size:21px; line-height:1.18; margin-bottom:8px;">Rachunki na wierzchu</h3>
+              <p style="font-size:15px; line-height:1.58; color:oklch(0.36 0.012 60);">Bez wydawcy, bez partii, bez reklam. W fazie MVP dostęp jest bezpłatny, a raz na kwartał publikujemy koszty serwera i modeli.</p>
+            </div>
+          
+        </div>
+      </section>
+    
+
+    <!-- jak powstaje wydanie -->
+    <section id="warsztat" style="padding:26px 0 30px; border-bottom:3px double oklch(0.24 0.012 60);">
+      <div style="display:flex; flex-wrap:wrap; gap:14px 30px; align-items:flex-end; justify-content:space-between; margin-bottom:18px;">
+        <div style="flex:1 1 300px; min-width:0;">
+          <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(0.48 0.15 32); margin-bottom:9px;">Warsztat · faza MVP</span>
+          <h2 style="font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(24px,3.4vw,40px); line-height:1.06;">Wydanie składa AI. Odpowiada człowiek</h2>
+        </div>
+        <p style="flex:1 1 300px; max-width:52ch; margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.012 60);">Na tym etapie nie ma prenumeraty ani ogłoszeń — dostęp jest bezpłatny, a koszty to serwer i modele. Pokazujemy cały tryb pracy, żeby dało się nam patrzeć na ręce.</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:clamp(16px,2.4vw,26px);">
+        
+          <div style="flex:1 1 220px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+            <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:7px;">6.00–20.00</span>
+            <h3 style="font-family:'Playfair Display',serif; font-size:20px; line-height:1.2; margin-bottom:7px;">Zbieranie</h3>
+            <p style="font-size:14.5px; line-height:1.56; color:oklch(0.38 0.012 60);">System czyta komunikaty urzędów, sprawozdania, BIP-y, transmisje z Sejmu i lokalne serwisy. Nic nie idzie na stronę.</p>
+          </div>
+        
+          <div style="flex:1 1 220px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+            <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:7px;">20.00–22.00</span>
+            <h3 style="font-family:'Playfair Display',serif; font-size:20px; line-height:1.2; margin-bottom:7px;">Sprawdzanie liczb</h3>
+            <p style="font-size:14.5px; line-height:1.56; color:oklch(0.38 0.012 60);">Każda liczba wraca do dokumentu źródłowego. Jeśli dwa źródła się rozchodzą, piszemy o tym w tekście, a nie wybieramy wygodniejszego.</p>
+          </div>
+        
+          <div style="flex:1 1 220px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+            <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:7px;">22.00–23.00</span>
+            <h3 style="font-family:'Playfair Display',serif; font-size:20px; line-height:1.2; margin-bottom:7px;">Ludzka korekta</h3>
+            <p style="font-size:14.5px; line-height:1.56; color:oklch(0.38 0.012 60);">Redaktor prowadzący czyta całe wydanie, wyrzuca to, co niepewne, i podpisuje numer swoim nazwiskiem.</p>
+          </div>
+        
+          <div style="flex:1 1 220px; min-width:0; border-top:2px solid oklch(0.24 0.012 60); padding-top:12px;">
+            <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.45 0.01 60); margin-bottom:7px;">6.00 nast. dnia</span>
+            <h3 style="font-family:'Playfair Display',serif; font-size:20px; line-height:1.2; margin-bottom:7px;">Jedna wysyłka</h3>
+            <p style="font-size:14.5px; line-height:1.56; color:oklch(0.38 0.012 60);">Wydanie staje się dostępne i zostaje niezmienione. Poprawki idą do rubryki sprostowań z datą.</p>
+          </div>
+        
+      </div>
+      <p style="margin:20px 0 0; font-family:'IBM Plex Mono',monospace; font-size:12px; line-height:1.7; letter-spacing:0.04em; color:oklch(0.45 0.01 60); max-width:78ch;">Czego AI u nas nie robi: nie wymyśla cytatów, nie opisuje zdarzeń bez co najmniej dwóch źródeł, nie generuje zdjęć i nie pisze komentarzy politycznych. Każdy tekst ma na dole listę źródeł i nazwisko osoby, która go dopuściła.</p>
+    </section>
+
+    <!-- archiwum -->
+    
+      <section id="archiwum" style="margin:26px 0 30px; background:oklch(0.24 0.012 60); color:oklch(0.94 0.012 85); padding:clamp(22px,3.4vw,44px);">
+        <div style="display:flex; flex-wrap:wrap; gap:14px 30px; align-items:flex-end; justify-content:space-between; border-bottom:1px solid oklch(0.42 0.012 60); padding-bottom:16px;">
+          <div style="min-width:0;">
+            <span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(0.72 0.06 40); margin-bottom:8px;">Czytelnia cyfrowa</span>
+            <h2 style="font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(26px,3.8vw,46px); line-height:1.04;">Archiwum 1894–1939, numer po numerze</h2>
+          </div>
+          <p style="flex:1 1 280px; max-width:440px; margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.80 0.012 85);">Czterdzieści pięć roczników, 6 200 numerów, przeszukiwalne pełnym tekstem. Skany za zgodą bibliotek cyfrowych regionu, dostęp bez opłat.</p>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(14px,2vw,24px); margin-top:22px;">
+          
+            <a href="#" style="flex:1 1 180px; min-width:0; background:oklch(0.30 0.012 60); border:1px solid oklch(0.42 0.012 60); padding:14px;" class="hv3">
+              <div style="height:clamp(190px,20vw,260px); background:repeating-linear-gradient(90deg, oklch(0.86 0.018 82) 0 5px, oklch(0.90 0.014 85) 5px 10px); display:flex; align-items:flex-end; padding:8px;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.35 0.012 60); background:oklch(0.95 0.012 85); padding:3px 5px;">skan 1894</span>
+              </div>
+              <span style="display:block; margin-top:11px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.72 0.06 40);">1 X 1894 · nr 1</span>
+              <span style="display:block; margin-top:5px; font-family:'Playfair Display',serif; font-size:17px; line-height:1.22; color:oklch(0.94 0.012 85);">Pierwszy numer. Nakład 500 egzemplarzy</span>
+            </a>
+          
+            <a href="#" style="flex:1 1 180px; min-width:0; background:oklch(0.30 0.012 60); border:1px solid oklch(0.42 0.012 60); padding:14px;" class="hv4">
+              <div style="height:clamp(190px,20vw,260px); background:repeating-linear-gradient(90deg, oklch(0.86 0.018 82) 0 5px, oklch(0.90 0.014 85) 5px 10px); display:flex; align-items:flex-end; padding:8px;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.35 0.012 60); background:oklch(0.95 0.012 85); padding:3px 5px;">skan 1894</span>
+              </div>
+              <span style="display:block; margin-top:11px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.72 0.06 40);">5 X 1894 · nr 3</span>
+              <span style="display:block; margin-top:5px; font-family:'Playfair Display',serif; font-size:17px; line-height:1.22; color:oklch(0.94 0.012 85);">„Dziesięć przykazań obywatelskich”</span>
+            </a>
+          
+            <a href="#" style="flex:1 1 180px; min-width:0; background:oklch(0.30 0.012 60); border:1px solid oklch(0.42 0.012 60); padding:14px;" class="hv5">
+              <div style="height:clamp(190px,20vw,260px); background:repeating-linear-gradient(90deg, oklch(0.86 0.018 82) 0 5px, oklch(0.90 0.014 85) 5px 10px); display:flex; align-items:flex-end; padding:8px;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.35 0.012 60); background:oklch(0.95 0.012 85); padding:3px 5px;">skan 1914</span>
+              </div>
+              <span style="display:block; margin-top:11px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.72 0.06 40);">2 VIII 1914 · nr 92</span>
+              <span style="display:block; margin-top:5px; font-family:'Playfair Display',serif; font-size:17px; line-height:1.22; color:oklch(0.94 0.012 85);">Nakład 128 500. Największe polskie pismo</span>
+            </a>
+          
+            <a href="#" style="flex:1 1 180px; min-width:0; background:oklch(0.30 0.012 60); border:1px solid oklch(0.42 0.012 60); padding:14px;" class="hv6">
+              <div style="height:clamp(190px,20vw,260px); background:repeating-linear-gradient(90deg, oklch(0.86 0.018 82) 0 5px, oklch(0.90 0.014 85) 5px 10px); display:flex; align-items:flex-end; padding:8px;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.35 0.012 60); background:oklch(0.95 0.012 85); padding:3px 5px;">skan 1939</span>
+              </div>
+              <span style="display:block; margin-top:11px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.72 0.06 40);">2 III 1939 · nr 26</span>
+              <span style="display:block; margin-top:5px; font-family:'Playfair Display',serif; font-size:17px; line-height:1.22; color:oklch(0.94 0.012 85);">Zmiana tytułu, przenosiny do Poznania</span>
+            </a>
+          
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center; margin-top:22px;">
+          <a href="#" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid oklch(0.94 0.012 85); color:oklch(0.94 0.012 85); padding:10px 16px;" class="hv7">Przeszukaj roczniki</a>
+          <span style="font-family:'Playfair Display',serif; font-style:italic; font-size:16px; color:oklch(0.78 0.012 85);">Wpisz nazwisko pradziadka. Zwykle coś się znajduje.</span>
+        </div>
+      </section>
+    
+
+    <!-- stopka -->
+    <footer style="border-top:3px solid oklch(0.24 0.012 60); padding:22px 0 40px;">
+      <div style="display:flex; flex-wrap:wrap; gap:22px clamp(18px,3vw,40px);">
+        <div style="flex:2 1 260px; min-width:0;">
+          <span style="display:block; font-family:'Playfair Display',serif; font-weight:900; font-size:24px; margin-bottom:8px;">Gazeta Grudziądzka</span>
+          <p style="font-size:14px; line-height:1.6; color:oklch(0.42 0.012 60);">Założona przez Wiktora Kulerskiego w 1894 r., żeby ludzie na prowincji mieli własne pismo. Wznowiona jako projekt jednoosobowy z pomocą AI: raz na dobę, ogólnopolsko, bez pogardy dla nikogo, kto tu mieszka.</p>
+        </div>
+        <div style="flex:1 1 170px; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; line-height:2; letter-spacing:0.06em; text-transform:uppercase;">
+          <span style="display:block; color:oklch(0.45 0.01 60);">Działy</span>
+          <a href="#" style="display:block;">Polska</a><a href="#" style="display:block;">Sejm i rząd</a><a href="#" style="display:block;">Wieś</a><a href="#" style="display:block;">Listy</a>
+        </div>
+        <div style="flex:1 1 170px; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; line-height:2; letter-spacing:0.06em; text-transform:uppercase;">
+          <span style="display:block; color:oklch(0.45 0.01 60);">Pismo</span>
+          <a href="#zasady" style="display:block;">Zasady</a><a href="#warsztat" style="display:block;">Jak powstaje</a><a href="#" style="display:block;">Sprostowania</a><a href="#" style="display:block;">Koszty i źródła</a>
+        </div>
+        <div style="flex:1 1 230px; min-width:0; overflow-wrap:anywhere; font-family:'IBM Plex Mono',monospace; font-size:12px; line-height:1.9; letter-spacing:0.06em; color:oklch(0.45 0.01 60);">
+          <span style="display:block; text-transform:uppercase;">Kontakt</span>
+          Bez siedziby i sekretariatu<br />redakcja@gazetagrudziadzka.pl<br />kanał szyfrowany dla dokumentów
+        </div>
+      </div>
+      <p style="margin:24px 0 0; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:oklch(0.5 0.01 60);">Projekt koncepcyjny · treści przykładowe · inspiracja: roczniki „Gazety Grudziądzkiej” 1894–1939</p>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>

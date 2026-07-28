@@ -1,0 +1,7 @@
+build/shots/
+*.zip
+node_modules/
+design_handoff_gazeta_grudziadzka/
+README.md
+src/
+build/
