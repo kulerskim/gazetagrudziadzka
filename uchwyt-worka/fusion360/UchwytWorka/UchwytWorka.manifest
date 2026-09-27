@@ -1,0 +1,10 @@
+{
+	"autodeskProduct": "Fusion",
+	"type": "script",
+	"author": "",
+	"description": {
+		"": "Uchwyt worka na smieci z klapka - generator modelu (ramka, klapka, pierscien, tasma-sprezyna)"
+	},
+	"supportedOS": "windows|mac",
+	"editEnabled": true
+}
