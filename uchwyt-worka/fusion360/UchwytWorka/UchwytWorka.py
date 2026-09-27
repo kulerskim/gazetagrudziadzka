@@ -161,7 +161,6 @@ def run(context):
         design.designType = adsk.fusion.DesignTypes.ParametricDesignType
         design.fusionUnitsManager.distanceDisplayUnits = adsk.fusion.DistanceUnits.MillimeterDistanceUnits
         root = design.rootComponent
-        root.name = 'Uchwyt worka'
 
         for comp_name, fn in tbh_design.PARTS:
             occ = root.occurrences.addNewComponent(adsk.core.Matrix3D.create())
