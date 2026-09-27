@@ -14,8 +14,8 @@ klapka otwierana sama po wciśnięciu przycisku od strony pokoju.
 | `stl/Pierscien.stl` | pierścień na worek | PLA / PETG | górą do stołu (uchwyty na stole) |
 | `stl/Tasma.stl` | taśma-sprężyna = zawias | **tylko PETG** | na płasko, listwy do góry |
 
-Wymiary: otwór 170 × 180 mm, wysokość ramki 50 mm, płyta 80 × 120 mm pod blat.
-Największa część (ramka z płytą) ma 256 × 211 mm, więc mieści się na stole 300 × 300.
+Wymiary: otwór 150 × 158 mm, wysokość ramki 45 mm, płyta 70 × 105 mm pod blat.
+Największa część (ramka z płytą) ma 226 × 189 mm.
 
 ## Jak to działa
 
@@ -58,12 +58,12 @@ strony blatu (+X).
 
 ## Sprawdzenie przed drukiem (zalecana kolejność)
 
-Pełny komplet to ok. 400 cm³ bryły, więc najpierw warto wydrukować małe testy
+Pełny komplet to ok. 330 cm³ bryły, więc najpierw warto wydrukować małe testy
 (`stl/testy/`, łącznie ok. 90 cm³, kilka godzin druku):
 
 | Test | Pliki | Co sprawdza |
 |---|---|---|
-| **0. Szablon 1:1** | `szablon/szablon_1do1.pdf` (2× A4 poziomo, drukuj w skali 100%, sprawdź linijką odcinek 100 mm) | Przyłóż go pod blat: czy ramka mieści się w szczelinie przy kaloryferze, czy płyta 80 mm mieści się pod nawisem blatu (nie trafia w bok szafki), gdzie wypadną wkręty. Nie zużywa filamentu. |
+| **0. Szablon 1:1** | `szablon/szablon_1do1.pdf` (2× A4 poziomo, drukuj w skali 100%, sprawdź linijką odcinek 100 mm) | Przyłóż go pod blat: czy ramka mieści się w szczelinie przy kaloryferze, czy płyta 70 mm mieści się pod nawisem blatu (nie trafia w bok szafki), gdzie wypadną wkręty. Nie zużywa filamentu. |
 | **1. Zawias-sprężyna** | `T1_zawias_ramka`, `T1_zawias_klapka`, `T1_tasma_40mm` | Czy listwy taśmy wchodzą w kanały (luz `c`), czy taśma nie pęka przy zginaniu i czy wyraźnie odpycha klapkę. Siła w pełnym modelu będzie 2× większa (taśma 80 mm). |
 | **2. Zatrzask** | `T2_zatrzask_ramka`, `T2_zatrzask_klapka` | Czy haczyk zaskakuje, czy przycisk zwalnia go lekkim naciskiem, czy ramię nie pęka. |
 | **3. Worek** | `T3_worek_ramka_12mm`, `T3_worek_pierscien_12mm` | Test na prawdziwym worku 65–120 l: czy pierścień z workiem wchodzi w ramkę z rozsądną siłą i trzyma worek. Jeśli wchodzi za ciasno, zwiększ `cb`, a jeśli za luźno, zmniejsz. |
@@ -88,7 +88,10 @@ W Fusion 360 możesz dodatkowo użyć:
 * `build_cadquery.py`: generuje STL i STEP z tej samej definicji (`pip install cadquery`).
   `render.py` i `section.py` robią podglądy w `img/`.
 
-Najważniejsze parametry w `P`: `H`, `Wi`, `Di` (rozmiar ramki), `Lp`, `Dp` (płyta), `cb`
+Aby zmienić rozmiar, **nie skaluj modelu w całości**: zmienisz wtedy grubość taśmy,
+luzy kanałów, otwory na wkręty i zaczep. Zmieniaj tylko parametry rozmiaru.
+
+Najważniejsze parametry w `P`: `H`, `Wi`, `Di`, `rc` (rozmiar ramki), `Lp`, `Dp` (płyta), `cb`
 (luz na worek; zwiększ, jeśli pierścień wchodzi za ciasno z grubym workiem), `ts`, `Ws`, `R`
 (siła sprężyny), `lp` (głębokość zaczepu), `g` (skok przycisku).
 

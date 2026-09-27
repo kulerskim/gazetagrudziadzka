@@ -17,20 +17,20 @@ import math
 
 P = dict(
     # --- ramka ---
-    H=50.0,          # wysokosc ramki (4-6 cm)
-    Wi=170.0,        # wewnetrzny wymiar otworu w X (wzdluz krawedzi blatu)
-    Di=180.0,        # wewnetrzny wymiar otworu w Y (sciana -> pokoj)
-    rc=15.0,         # promien naroznikow otworu
+    H=45.0,          # wysokosc ramki (4-6 cm)
+    Wi=150.0,        # wewnetrzny wymiar otworu w X (wzdluz krawedzi blatu)
+    Di=158.0,        # wewnetrzny wymiar otworu w Y (sciana -> pokoj)
+    rc=13.0,         # promien naroznikow otworu
     t=3.0,           # grubosc scianek
     lip_w=3.0,       # wewnetrzny kolnierz 45 st. na dole (oparcie pierscienia)
     # --- plyta montazowa pod blat ---
-    Lp=80.0,         # wysiegniecie plyty pod blat (od sciany ramki)
-    Dp=120.0,        # szerokosc plyty (w Y)
+    Lp=70.0,         # wysiegniecie plyty pod blat (od sciany ramki)
+    Dp=105.0,        # szerokosc plyty (w Y)
     tp=6.0,          # grubosc plyty
     hole_d=4.5,      # otwor na wkret (4 mm, leb stozkowy)
     csk_d=9.0,       # srednica poglebienia stozkowego 90 st.
-    hole_x=50.0,     # odleglosc otworow od sciany ramki
-    hole_dy=70.0,    # rozstaw otworow w Y
+    hole_x=44.0,     # odleglosc otworow od sciany ramki
+    hole_dy=60.0,    # rozstaw otworow w Y
     rib_t=4.0,       # grubosc zeber pod plyta
     # --- zatrzask z przyciskiem (strona pokoju) ---
     g=3.0,           # szczelina miedzy ramieniem sprezystym a sciana
